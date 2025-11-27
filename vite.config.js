@@ -5,7 +5,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        location:'location.html'
         // Añade aquí todos los html que quieras incluir
       }
     }
