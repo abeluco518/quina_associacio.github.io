@@ -9,5 +9,5 @@ export default defineConfig({
       }
     }
   },
-  base: './'
+  base: '/quina_associacio.github.io/'
 })
