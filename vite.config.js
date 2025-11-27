@@ -9,5 +9,5 @@ export default defineConfig({
       }
     }
   },
-  base: '/gallery_art_microsite.github.io/'
+  base: './'
 })
