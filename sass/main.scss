@@ -1,0 +1,91 @@
+/* ---------------------------------------------
+   Reset básico
+--------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------
+   Variables
+--------------------------------------------- */
+$color-pragma: #416487;
+$circle-color: black;
+$circle-active-opacity: 0.5;
+
+/* ---------------------------------------------
+   Header
+--------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0 50px 0;
+
+  &__image-quina {
+    width: 300px;
+  }
+
+  &__image-associacio {
+    width: 370px;
+  }
+}
+
+/* ---------------------------------------------
+   Contenedor de bingo
+--------------------------------------------- */
+.bingo-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------------
+   Tablero de bingo
+--------------------------------------------- */
+.bingo {
+  display: grid;
+  grid-template-columns: repeat(10, 90px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---------------------------------------------
+   Casillas de números
+--------------------------------------------- */
+.number-container {
+  position: relative;
+  border: 3px solid $color-pragma;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  p.number {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-pragma;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .bingo__circle {
+
+    position: absolute;
+    
+    aspect-ratio: 1;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $circle-color;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+  }
+
+  .bingo__circle-on {
+    opacity: $circle-active-opacity;
+  }
+}
