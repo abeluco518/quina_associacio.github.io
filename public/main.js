@@ -10,3 +10,4 @@ for (let number of numbers) {
         document.getElementById('number-show__number').textContent=number.querySelector('.number').textContent
     })
 }
+
